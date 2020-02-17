@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack -p --mode production",
-    "dev": "./node_modules/.bin/webpack-dev-server --config ./webpack.config.js --mode development",
-    "start": "npm run build && node index"
+    "start": "./node_modules/.bin/webpack-dev-server --config ./webpack.config.js --mode development"
   },
   "keywords": [],
   "author": "hndkhoa",

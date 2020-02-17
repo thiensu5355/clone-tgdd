@@ -1,9 +1,9 @@
 ### To run this project with development mode:
 ```
-npm run dev
+npm run start
 ```
 
 ### To run this tool with production mode:
 ```
-npm start
+npm run build
 ```
