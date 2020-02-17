@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack -p --mode production",
-    "start": "./node_modules/.bin/webpack-dev-server --config ./webpack.config.js --mode development"
+    "dev": "./node_modules/.bin/webpack-dev-server --config ./webpack.config.js --mode development",
+    "start": "npm run build && node index"
   },
   "keywords": [],
   "author": "hndkhoa",
@@ -29,6 +30,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   }
