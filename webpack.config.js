@@ -4,12 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const devMode = process.env.NODE_ENV !== 'production';
-const SRC_DIR = path.resolve(__dirname, 'app');
 const DIST_DIR = path.resolve(__dirname, 'dist');
 
 module.exports = {
     entry: {
-        app: ['./app/js/index.js']
+        app: ['./src/index.js']
     },
     output: {
         path: DIST_DIR,
@@ -55,9 +54,9 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            template: SRC_DIR + '/index.html',
+            template: path.resolve(__dirname, 'public', 'index.html'),
             filename: './index.html',
-            favicon: SRC_DIR + '/img/favicon.ico'
+            favicon: path.resolve(__dirname, 'public', 'favicon.ico')
         }),
         new MiniCssExtractPlugin({
             filename: devMode ? '[name].css' : '[name].[hash].css',
